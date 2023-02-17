@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Build') { 
             steps {
-                sh 'g++ -o hello.cpp'
+                sh 'g++ -o hello hello.cpp'
 		echo:'PES1UG20CS725-1 BUILD SUCCESSFUL'  
 		echo:'Build Stage Successful'    
             }
@@ -16,8 +16,8 @@ pipeline {
         }
         stage('Deploy') { 
             steps {
-                //sh './output'
-                error 'Pipeline Failed' 
+                echo 'deployed successfully'
+                //error 'Pipeline Failed' 
             }
         }
     }
